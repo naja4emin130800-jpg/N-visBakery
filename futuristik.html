@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NævisBakery - Toko Roti Futuristik</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
+    body{background:linear-gradient(180deg,#fff8fc,#ffeef6,#fff);color:#2b1b24;overflow-x:hidden}
+    body::-webkit-scrollbar{width:10px}
+    body::-webkit-scrollbar-thumb{background:linear-gradient(#ff4fa0,#ff8ac2);border-radius:20px}
+    section{padding:90px 8%}
+    .blur{position:absolute;border-radius:50%;filter:blur(90px);z-index:-1;opacity:.35}
+    .b1{width:260px;height:260px;background:#ff77b7;top:80px;left:-50px}
+    .b2{width:300px;height:300px;background:#ffc4df;top:400px;right:-80px}
+    .b3{width:240px;height:240px;background:#ff8fc5;bottom:100px;left:35%}header{position:sticky;top:0;z-index:999;background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.4)}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 8%}
+.logo{font-size:2rem;font-weight:800;color:#b10059}
+.logo span{color:#ff9fca}
+nav ul{display:flex;gap:28px;list-style:none}
+nav ul li a{text-decoration:none;color:#3d2430;font-weight:500;transition:.3s}
+nav ul li a:hover{color:#d6006d}
+
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr 1fr;align-items:center;gap:40px;position:relative}
+.hero h1{font-size:4rem;line-height:1.1;color:#b10059}
+.hero h1 span{display:block;color:#ff98c7}
+.hero p{margin:20px 0;font-size:1.08rem;color:#5c4450;max-width:540px;line-height:1.8}
+.btn{display:inline-block;padding:15px 30px;background:linear-gradient(135deg,#d6006d,#ff78b8);color:#fff;text-decoration:none;border-radius:50px;font-weight:600;box-shadow:0 10px 25px rgba(214,0,109,.25);transition:.35s}
+.btn:hover{transform:translateY(-4px) scale(1.03)}
+.hero-img{display:flex;justify-content:center;position:relative}
+.hero-img img{width:100%;max-width:500px;animation:float 4s ease-in-out infinite;filter:drop-shadow(0 20px 30px rgba(255,87,153,.25))}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+
+.title{text-align:center;font-size:2.6rem;color:#b10059;margin-bottom:50px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:rgba(255,255,255,.8);backdrop-filter:blur(14px);padding:22px;border-radius:28px;box-shadow:0 10px 30px rgba(255,145,190,.15);transition:.35s;border:1px solid rgba(255,255,255,.5)}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;height:220px;object-fit:contain}
+.card h3{color:#8e0048;margin:10px 0}
+.card p{font-size:.95rem;color:#5d4a53;line-height:1.6}
+.price{display:inline-block;margin-top:15px;padding:12px 18px;background:#ffe6f1;color:#b10059;border-radius:14px;font-weight:700}
+
+.about{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.about img{width:100%;max-width:480px;animation:float 5s ease-in-out infinite}
+.about h2{font-size:2.6rem;color:#b10059;margin-bottom:18px}
+.about p{line-height:1.9;color:#5b4550;margin-bottom:18px}
+.check{display:flex;flex-direction:column;gap:14px}
+.check div{background:#fff;padding:14px 18px;border-radius:18px;box-shadow:0 8px 18px rgba(255,120,180,.08)}
+
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:30px}
+.box{background:rgba(255,255,255,.85);padding:28px;border-radius:28px;box-shadow:0 10px 28px rgba(255,145,190,.12)}
+.box h3{color:#b10059;margin-bottom:16px}
+.map{width:100%;height:280px;border:none;border-radius:20px}
+
+footer{background:#1f1c2f;color:#fff;padding:70px 8% 25px;margin-top:80px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+footer h3{margin-bottom:15px;color:#ff9fca}
+footer p,footer a{color:#ddd;text-decoration:none;line-height:2}
+.copy{text-align:center;margin-top:35px;color:#aaa}
+
+@media(max-width:900px){
+  .hero,.about,.contact{grid-template-columns:1fr}
+  .hero h1{font-size:3rem}
+  nav ul{display:none}
+  section{padding:80px 6%}
+}
+}
+  </style>
+</head>
+<body>
+  <div class="blur b1"></div><div class="blur b2"></div><div class="blur b3"></div>  <header>
+    <nav>
+      <div class="logo">Nævis<span>Bakery</span></div>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#produk">Kategori</a></li>
+        <li><a href="#produk">Produk Terlaris</a></li>
+        <li><a href="#about">Tentang Toko</a></li>
+      </ul>
+    </nav>
+  </header>  <section class="hero" id="home">
+    <div>
+      <h1>Toko Roti Terbaik <span>Enak & Lezat</span></h1>
+      <p>Nikmati berbagai macam roti dan dessert premium dengan desain futuristik, rasa autentik, dan pelayanan cepat. Dibuat fresh setiap hari dengan sentuhan modern.</p>
+      <a href="#produk" class="btn">Lihat Produk</a>
+    </div>
+    <div class="hero-img">
+      <img src="dessert.png" alt="Cake">
+    </div>
+  </section>  <section id="produk">
+    <h2 class="title">Produk Unggulan</h2>
+   <div class="cards">
+  <div class="card"><img src="crom.jpg" alt="Cromboloni"><h3>Cromboloni</h3><p>Pastry renyah berlapis dengan isian cream manis lumer dan tekstur lembut di dalam.</p><span class="price">Rp 27.000</span></div>
+
+  <div class="card"><img src="tart.jpg" alt="Kue Tart"><h3>Kue Tart</h3><p>Kue lembut premium dengan cream manis halus, cocok untuk momen spesial dan perayaan.</p><span class="price">Rp 10.000</span></div>
+
+  <div class="card"><img src="tira.jpg" alt="Tiramisu"><h3>Tiramisu</h3><p>Dessert lembut dengan perpaduan kopi, cream mascarpone, dan rasa manis elegan.</p><span class="price">Rp 45.000</span></div>
+
+  <div class="card"><img src="chesee.jpg" alt="Cheesecake"><h3>Cheesecake</h3><p>Kue creamy lembut dengan rasa keju yang rich, manis, dan mewah di setiap gigitan.</p><span class="price">Rp 38.000</span></div>
+
+  <div class="card"><img src="cup.jpg" alt="Cupcake"><h3>Cupcake</h3><p>Kue mini fluffy dengan buttercream lembut dan topping cantik yang manis menggemaskan.</p><span class="price">Rp 15.000</span></div>
+
+  <div class="card"><img src="blue.jpg" alt="Blueberry Cake"><h3>Blueberry Cake</h3><p>Kue lembut dengan cream halus dan topping blueberry segar yang manis menyegarkan.</p><span class="price">Rp 30.000</span></div>
+
+  <div class="card"><img src="bungee.jpg" alt="Bungeoppang"><h3>Bungeoppang</h3><p>Kue ikan khas Korea dengan kulit lembut dan isian manis yang hangat dan unik.</p><span class="price">Rp 18.000</span></div>
+
+  <div class="card"><img src="brownies.jpg" alt="Brownies Lumer"><h3>Brownies Lumer</h3><p>Brownies coklat pekat dengan tekstur fudgy lembut dan sensasi lumer di mulut.</p><span class="price">Rp 40.000</span></div>
+
+  <div class="card"><img src="acai.jpg" alt="Acai Bowl"><h3>Acai Bowl</h3><p>Smoothie bowl segar dengan buah acai, granola renyah, dan topping buah fresh yang manis.</p><span class="price">Rp 95.000</span></div>
+</div>
+ <section class="about" id="about">
+    <img src="bungaa.png" alt="About Cake">
+      </section> 
+      <h2>Tentang NævisBakery</h2>
+      <p>NævisBakery adalah toko roti modern yang menghadirkan produk fresh handmade dengan desain estetik, rasa premium, dan pengalaman belanja digital yang smooth.</p>
+      <div class="check">
+        <div>✔ Bahan-bahan premium dan alami</div>
+        <div>✔ Pengiriman cepat dan aman</div>
+        <div>✔ Tampilan modern & futuristik</div>
+         <div>✔ Menggunakan pemanis alami</div>
+          <div>✔ Harga terjangkau</div>
+      </div>
+    </div>
+   <section class="contact">
+    <div class="box">
+      <h3>Hubungi Kami</h3>
+      <p>📍 Tegal, Jawa Tengah</p>
+      <p>📞 +62 812 3456 7890</p>
+      <p>✉ NævisBakery@gmail.com</p><br>
+      <a href="#" class="btn">Chat Sekarang</a>
+    </div>
+    <div class="box">
+      <h3>Lokasi Toko</h3>
+      <iframe class="map" src="https://www.google.com/maps?q=tegal&output=embed"></iframe>
+    </div>
+       <section class="about" id="about">
+    <img src="seong.png" alt="About Cake">
+      </section> 
+  </section>  <footer>
+    <div class="footer-grid">
+      <div><h3>NævisBakery</h3><p>Roti fresh setiap hari dengan rasa premium untuk keluarga modern.</p></div>
+      <div><h3>Navigasi</h3><a href="#">Beranda</a><br><a href="#">Kategori</a><br><a href="#">Produk</a><br><a href="#">Tentang</a></div>
+      <div><h3>Kontak</h3><p>Tegal</p><p>+62 812 3456 7890</p><p>NævisBakery@gmail.com</p></div>
+      <div><h3>Ikuti Kami</h3><p>Instagram • Facebook • TikTok</p></div>
+    </div>
+    <div class="copy">© 2026 NævisBakery. All Rights Reserved.</div>
+  </footer>
+</body>
+</html>
